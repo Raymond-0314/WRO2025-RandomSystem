@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>WRO2025 Random System</title>
+  <link rel="icon" href="Source/img/SLRLogo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="Source/style.css" />
+</head>
+
+<body>
+  <header>
+    <img src="Source/img/LOGO.png" alt="小洛特樂高機器人" id="SLRLogo" />
+  </header>
+
+  <div id="main-container">
+    <!-- 計時器區 -->
+    <div id="timer-area">
+      <div id="timer-display">
+        <span id="main-time">00:00:00</span><span id="ms-time">.000</span>
+      </div>
+      <div id="timer-controls">
+        <button id="toggle-timer">開始</button>
+        <button id="reset-timer">重設</button>
+      </div>
+    </div>
+
+    <!-- 抽籤區，左右分兩邊 -->
+    <div id="draw-container">
+      <div class="draw-panel flex-column">
+        <h2>Elementary</h2>
+        <div id="elementary-result" class="draw-blocks"></div>
+        <div class="control-panel">
+          <button onclick="draw('elementary')" class="draw-button">重新抽籤</button>
+          <select id="elementary-interval">
+            <option value="30000">30 秒</option>
+            <option value="60000" selected>1 分鐘</option>
+            <option value="120000">2 分鐘</option>
+            <option value="300000">5 分鐘</option>
+            <option value="600000">10 分鐘</option>
+          </select>
+          <button id="elementary-toggle" class="auto-draw-button">自動抽籤停止</button>
+        </div>
+      </div>
+
+      <div class="draw-panel flex-column">
+        <h2>Junior</h2>
+        <div id="junior-result" class="draw-blocks"></div>
+        <div class="control-panel">
+          <button onclick="draw('junior')" class="draw-button">重新抽籤</button>
+          <select id="junior-interval">
+            <option value="30000">30 秒</option>
+            <option value="60000" selected>1 分鐘</option>
+            <option value="120000">2 分鐘</option>
+            <option value="300000">5 分鐘</option>
+            <option value="600000">10 分鐘</option>
+          </select>
+          <button id="junior-toggle" class="auto-draw-button">自動抽籤停止</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="Source/APPmain.js"></script>
+  <script src="Source/timer.js"></script>
+</body>
+
+</html>
