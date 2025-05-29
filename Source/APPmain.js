@@ -7,6 +7,9 @@ const colorMap = {
   "空": "color-black"
 };
 
+// 在最上方宣告音效
+const drawSound = new Audio('Source/audio/hint.mp3');
+
 function draw(group) {
   let result = [];
 
@@ -20,6 +23,9 @@ function draw(group) {
   }
 
   renderResult(group, result);
+
+  drawSound.currentTime = 0; // 確保每次都從頭播放
+  drawSound.play();
 }
 
 function shuffle(array) {
