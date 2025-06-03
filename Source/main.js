@@ -140,8 +140,9 @@ window.onload = () => {
     if (intervalSelect) {
       intervalSelect.value = "60000";
     }
+    startAutoDraw(group);
     stopAutoDraw(group);
-    //startAutoDraw(group);
+    
 
     
   });
