@@ -104,10 +104,11 @@ header {
 
 
 /* 當畫面寬度小於某個閾值，例如 800px，改成上下排列 */
-@media (max-width: 850px) {
+@media (max-width: 980px) {
   #draw-container {
     flex-direction: column;
     /*height: auto;  /* 讓高度隨內容撐開 */
+    width: 100%;
   }
   
   .draw-panel {
